@@ -46,6 +46,10 @@ function Navbar() {
               </a>
             </li>
           ))}
+
+          <button className="text-gray-300 hover:text-yellow-400 transition">
+            <Moon size={20} />
+          </button>
         </ul>
       </nav>
     </header>
