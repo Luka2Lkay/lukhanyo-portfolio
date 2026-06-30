@@ -46,8 +46,17 @@ function Navbar() {
   }, []);
 
   return (
-    <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-slate-900/80 backdrop-blur-md shadow-lg" : "bg-slate-900"}`}
+    <motion.header
+      animate={{
+        y: showNavbar ? 0 : "-100%",
+      }}
+      transition={{
+        duration: 0.3,
+        ease: "easeInOut",
+      }}
+      className={`fixed top-0 left-0 w-full z-50 ${
+        scrolled ? "bg-slate-900/80 backdrop-blur-md shadow-lg" : "bg-slate-900"
+      }`}
     >
       <nav className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <a href="#home" className="text-2xl font-bold text-white tracking-wide">
@@ -110,7 +119,7 @@ function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
+    </motion.header>
   );
 }
 
