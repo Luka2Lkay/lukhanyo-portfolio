@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X, Moon, Sun } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { tr } from "framer-motion/client";
 
 const navItems = [
   { name: "Home", href: "#home" },
@@ -51,6 +52,13 @@ function Navbar() {
             <Moon size={20} />
           </button>
         </ul>
+
+        <button
+          className="md:hidden text-white"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? <X size={30} /> : <Menu size={30} />}
+        </button>
       </nav>
     </header>
   );
