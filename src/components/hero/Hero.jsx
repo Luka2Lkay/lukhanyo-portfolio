@@ -22,6 +22,36 @@ function Hero() {
           <h1 className="text-5xl">Lukhanyo</h1>
 
           <TypingText />
+
+          <div className="mt-8 rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
+            <p className="leading-8 text-slate-300">
+              Building scalable, responsive and user-focused web applications
+              using React, Node.js, Express, PostgreSQL and modern frontend
+              technologies.
+            </p>
+
+            <div className="mt-5 flex flex-wrap gap-3">
+              <span className="rounded-full bg-cyan-500/20 px-4 py-2">
+                React
+              </span>
+              <span className="rounded-full bg-cyan-500/20 px-4 py-2">
+                Next.js
+              </span>
+              <span className="rounded-full bg-cyan-500/20 px-4 py-2">
+                TypeScript
+              </span>
+              <span className="rounded-full bg-cyan-500/20 px-4 py-2">
+                Node.js
+              </span>
+              <span className="rounded-full bg-cyan-500/20 px-4 py-2">
+                Express.js
+              </span>
+              <span className="rounded-full bg-cyan-500/20 px-4 py-2">SQL</span>
+              <span className="rounded-full bg-cyan-500/20 px-4 py-2">
+                MongoDB
+              </span>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>
