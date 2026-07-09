@@ -25,7 +25,7 @@ function Background() {
       className="absolute  inset-[-300px] overflow-hidden"
     >
       <motion.div
-        style={{ x: x2, y: y2 }}
+        style={{ x, y }}
         animate={{ scale: [1, 1.15, 1] }}
         transition={{ duration: 12, repeat: Infinity, repeatType: "easeInOut" }}
         className="
@@ -39,7 +39,28 @@ function Background() {
           blur-[120px]
         "
       />
-      <motion.div style={{ x: x2, y: y2 }} animate={{ scale: [1, 1.15, 1] }} transition={{ duration: 12, repeat: Infinity, repeatType: "easeInOut" }} className="absolute bottom-0 right-0 h-[500px] w-[500px] rounded-full bg-blue-600/20 blur-[140px]" />
+      <motion.div
+        style={{ x: x2, y: y2 }}
+        animate={{ scale: [1, 1.2, 1] }}
+        transition={{ duration: 15, repeat: Infinity, repeatType: "easeInOut" }}
+        className="absolute bottom-0 right-0 h-[500px] w-[500px] rounded-full bg-blue-600/20 blur-[140px]"
+      />
+      <motion.div
+        animate={{ x: [0, 60, 0], y: [0, -40, 0] }}
+        transition={{ duration: 18, repeat: Infinity, repeatType: "easeInOut" }}
+        className="
+          absolute
+          top-1/2
+          left-1/2
+          h-[300px]
+          w-[300px]
+          -translate-x-1/2
+          -translate-y-1/2
+          rounded-full
+          bg-purple-600/10
+          blur-[100px]
+        "
+      />
     </div>
   );
 }
