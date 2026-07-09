@@ -4,12 +4,12 @@
   margin: auto 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
+html,
+body,
+#root {
+  background: #020617;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 section {
