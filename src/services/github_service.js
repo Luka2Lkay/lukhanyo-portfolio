@@ -49,5 +49,19 @@ query($username: String!) {
     },
   );
 
-  return response.data;
+  const stars = response.data.data.user.repositories.nodes.reduce(
+    (acc, repo) => acc + repo.stargazerCount,
+    0,
+  );
+
+  response.data.data.user.repositories.totalStars = stars;
+
+  return {
+    repositories: response.data.data.user.repositories.totalCount,
+    stars: response.data.data.user.repositories.totalStars,
+    contributions:
+      response.data.data.user.contributionsCollection.totalCommitContributions,
+    pullRequests: response.data.data.user.pullRequests.totalCount,
+    followers: response.data.data.user.followers.totalCount,
+  };
 };
