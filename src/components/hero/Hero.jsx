@@ -29,7 +29,9 @@ function Hero() {
         >
           <p className="text-cyan-400 mb-4"> &#129309; Hello, I'm</p>
 
-          <h1 className="text-5xl">Lukhanyo</h1>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white">
+            Lukhanyo
+          </h1>
 
           <TypingText />
 
