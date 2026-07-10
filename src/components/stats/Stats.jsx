@@ -1,6 +1,8 @@
 import { useInView } from "react-intersection-observer";
 import CountUp from "react-countup";
 import { motion } from "framer-motion";
+import { getGithubStats } from "@/services/github_service";
+import { useEffect } from "react";
 
 const stats = [
   {
@@ -31,8 +33,11 @@ function Stats() {
     threshold: 0.5,
   });
 
-  console.log("CountUp:", CountUp);
-  console.log("motion:", motion);
+  useEffect(() => {
+    getGithubStats().then((data) => {
+      console.log("GitHub Stats:", data);
+    });
+  });
 
   return (
     <div ref={ref} className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4">
