@@ -2,7 +2,8 @@ import { useInView } from "react-intersection-observer";
 import CountUp from "react-countup";
 import { motion } from "framer-motion";
 import { getGithubStats } from "@/services/github_service";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import StatsSkeleton from "../stats_skeleton/StatsSkeleton";
 
 const stats = [
   {
@@ -33,17 +34,32 @@ function Stats() {
     threshold: 0.5,
   });
 
+  const [githubStats, setGithubStats] = useState(null);
+
   useEffect(() => {
-    getGithubStats().then((data) => {
-      console.log("GitHub Stats:", data);
-    });
-  });
+    (async () => {
+      const data = await getGithubStats();
+      setGithubStats(data);
+    })();
+  }, [githubStats]);
+
+  if (!githubStats) {
+    return <StatsSkeleton />;
+  }
+
+  const cards = [
+    { value: githubStats.repositories, suffix: "+", label: "Repositories" },
+    { value: githubStats.stars, suffix: "+", label: "Stars" },
+    { value: githubStats.contributions, suffix: "+", label: "Contributions" },
+    { value: githubStats.pullRequests, suffix: "+", label: "Pull Requests" },
+    { value: githubStats.followers, suffix: "+", label: "Followers" },
+  ];
 
   return (
     <div ref={ref} className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4">
-      {stats.map((stat, index) => (
+      {cards.map((card, index) => (
         <motion.div
-          key={stat.label}
+          key={card.label}
           initial={{ opacity: 0, y: 25 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: index * 0.15 }}
@@ -63,12 +79,14 @@ function Stats() {
           <h3 className="text-3xl font-bold text-cyan-400">
             {inView && (
               <CountUp.default
-                end={stat.value}
+                end={card.value}
                 duration={2}
-                suffix={stat.suffix}
+                suffix={card.suffix}
               />
             )}
           </h3>
+
+          <p className="mt-2 text-slate-400">{card.label}</p>
         </motion.div>
       ))}
     </div>
