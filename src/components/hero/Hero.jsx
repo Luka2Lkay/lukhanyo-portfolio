@@ -6,6 +6,7 @@ import { ArrowRight } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Stats from "@/components/stats/Stats";
 import FloatingIcons from "@/components/floating_icons/FloatingIcons";
+import ScrollIndicator from "@/components/scroll_indicator/ScrollIndicator";
 
 const skills = [
   "React",
@@ -26,7 +27,7 @@ function Hero() {
     >
       <Background />
 
-      <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center justify-between gap-16 lg:flex-row">
+      <div className="relative z-10 mb-50 mx-auto flex max-w-7xl flex-col items-center justify-between gap-16 lg:flex-row">
         <motion.div
           initial={{ opacity: 0, x: -70 }}
           animate={{ opacity: 1, x: 0 }}
@@ -115,6 +116,7 @@ function Hero() {
           <FloatingIcons />
         </motion.div>
       </div>
+      <ScrollIndicator />
     </section>
   );
 }
