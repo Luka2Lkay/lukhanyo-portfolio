@@ -61,6 +61,11 @@ function Background() {
           blur-[100px]
         "
       />
+
+      <div
+        className="absolute inset-0 opacity-[0.05] overflow-hidden  [background-image:linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)]
+          [background-size:80px_80px]"
+      />
     </div>
   );
 }
