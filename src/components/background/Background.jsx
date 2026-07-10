@@ -66,6 +66,9 @@ function Background() {
         className="absolute inset-0 opacity-[0.05] overflow-hidden  [background-image:linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)]
           [background-size:80px_80px]"
       />
+
+      <div
+        className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#020617_80%)]"/>
     </div>
   );
 }
