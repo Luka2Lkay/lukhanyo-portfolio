@@ -27,7 +27,7 @@ function Hero() {
           transition={{ duration: 0.8 }}
           className="w-full max-w-2xl text-center lg:text-left"
         >
-          <p className="text-cyan-400 mb-4"> &#129309; Hello, I'm</p>
+          <p className="text-cyan-400 mb-4 md:mt-4"> &#129309; Hi, I'm</p>
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white">
             Lukhanyo
@@ -37,8 +37,7 @@ function Hero() {
 
           <div className="mt-8 rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
             <p className="leading-8 text-slate-300">
-              <strong>Software Engineer</strong> bridging the gap between robust
-              backend systems and intuitive frontend interfaces.
+              Bridging the gap between robust backend systems and intuitive frontend interfaces.
             </p>
 
             <div className="mt-5 flex flex-wrap gap-3">
