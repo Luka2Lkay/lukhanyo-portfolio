@@ -1,5 +1,3 @@
-import React from "react";
-
 function StatsSkeleton() {
   return (
     <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4">

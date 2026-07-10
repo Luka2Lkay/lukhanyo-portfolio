@@ -5,29 +5,6 @@ import { getGithubStats } from "@/services/github_service";
 import { useEffect, useState } from "react";
 import StatsSkeleton from "../stats_skeleton/StatsSkeleton";
 
-const stats = [
-  {
-    value: 20,
-    suffix: "+",
-    label: "Projects",
-  },
-  {
-    value: 100,
-    suffix: "+",
-    label: "GitHub Commits",
-  },
-  {
-    value: 15,
-    suffix: "+",
-    label: "Technologies",
-  },
-  {
-    value: 3,
-    suffix: "+",
-    label: "Years Learning",
-  },
-];
-
 function Stats() {
   const [ref, inView] = useInView({
     triggerOnce: true,
