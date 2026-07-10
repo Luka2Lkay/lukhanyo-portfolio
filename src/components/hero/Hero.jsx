@@ -5,6 +5,7 @@ import { Link } from "react-scroll";
 import { ArrowRight } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Stats from "@/components/stats/Stats";
+import FloatingIcons from "@/components/floating_icons/FloatingIcons";
 
 const skills = [
   "React",
@@ -103,6 +104,15 @@ function Hero() {
           </div>
 
           <Stats />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: 80 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="relative flex w-full justify-center lg:w-1/2"
+        >
+          <FloatingIcons />
         </motion.div>
       </div>
     </section>
