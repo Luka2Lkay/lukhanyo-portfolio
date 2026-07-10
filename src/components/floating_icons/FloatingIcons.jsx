@@ -33,6 +33,9 @@ function FloatingIcons() {
             style={{
               left: "50%",
               top: "50%",
+              translateX: "-50%",
+              translateY: "-50%",
+              position: "absolute",
               x,
               y,
             }}
@@ -61,7 +64,7 @@ function FloatingIcons() {
 
       <motion.div
         animate={{ y: [0, -12, 0] }}
-        transition={{ duration: 4, repeat: Infinity, repeatType: "easeInOut" }}
+        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         className="
           relative
           flex
