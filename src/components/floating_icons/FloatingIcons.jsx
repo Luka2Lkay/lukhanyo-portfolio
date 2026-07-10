@@ -14,10 +14,9 @@ const icons = [
   { Icon: FaNodeJs, x: 170, y: 0 },
   { Icon: SiPostgresql, x: 120, y: 120 },
   { Icon: SiMongodb, x: 0, y: 170 },
-  { Icon: FaDocker, x: -120, y: 120 },
+  { Icon: SiNextdotjs, x: -120, y: 120 },
   { Icon: FaGitAlt, x: -170, y: 0 },
   { Icon: SiExpress, x: -120, y: -120 },
-  { Icon: SiNextdotjs, x: 0, y: 0 },
 ];
 
 function FloatingIcons() {
@@ -58,6 +57,39 @@ function FloatingIcons() {
             <Icon size={30} className="text-cyan-400" />
           </motion.div>
         ))}
+      </motion.div>
+
+      <motion.div
+        animate={{ y: [0, -12, 0] }}
+        transition={{ duration: 4, repeat: Infinity, repeatType: "easeInOut" }}
+        className="
+          relative
+          flex
+          h-64
+          w-64
+          items-center
+          justify-center
+          overflow-hidden
+          rounded-full
+          border
+          border-cyan-500/40
+          bg-white/5
+          backdrop-blur-xl
+        "
+      >
+        <div className="absolute inset-0 bg-cyan-500/10 blur-3xl" />
+
+        <img
+          src="../../../src/assets/Luka.jpg"
+          alt="Lukhanyo"
+          className="
+            relative
+            h-56
+            w-56
+            rounded-full
+            object-cover
+          "
+        />
       </motion.div>
     </div>
   );
