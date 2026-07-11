@@ -1,5 +1,6 @@
 import MyStory from "@/components/about_section/my_story/MyStory";
-import JourneyTimeline from "@/components/journey_timeline/JourneyTimeline";
+import JourneyTimeline from "@/components/about_section/journey_timeline/JourneyTimeline";
+import FocusArears from "../focus_areas/FocusArears";
 
 function About() {
   return (
@@ -8,6 +9,7 @@ function About() {
         <div className="grid items-start gap-16 lg:grid-cols-2">
           <MyStory />
           <JourneyTimeline />
+          <FocusArears />
         </div>
       </div>
     </section>
