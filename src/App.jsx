@@ -2,7 +2,7 @@ import "./App.css";
 import Navbar from "@/components/navbar/Navbar";
 import { Hero } from "@/sections/hero";
 import { About } from "@/sections/about";
-import Projects from "./components/projects_section/projects/Projects";
+import { Projects } from "./sections/projects";
 
 function App() {
   return (
