@@ -1,12 +1,12 @@
-import Background from "@/components/hero_section/background/Background";
-import TypingText from "@/components/hero_section/typing_text/TypingText";
+import Background from "@/sections/hero/components/Background";
+import TypingText from "@/sections/hero/components/TypingText";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import { ArrowRight } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import Stats from "@/components/hero_section/stats/Stats";
-import FloatingIcons from "@/components/hero_section/floating_icons/FloatingIcons";
-import ScrollIndicator from "@/components/hero_section/scroll_indicator/ScrollIndicator";
+import Stats from "@/sections/hero/components/Stats";
+import FloatingIcons from "@/sections/hero/components/FloatingIcons";
+import ScrollIndicator from "@/sections/hero/components/ScrollIndicator";
 
 const skills = [
   "React",

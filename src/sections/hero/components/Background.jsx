@@ -28,16 +28,7 @@ function Background() {
         style={{ x, y }}
         animate={{ scale: [1, 1.15, 1] }}
         transition={{ duration: 12, repeat: Infinity, repeatType: "easeInOut" }}
-        className="
-          absolute
-          top-0
-          left-0
-          h-[450px]
-          w-[450px]
-          rounded-full
-          bg-cyan-500/20
-          blur-[120px]
-        "
+        className="absolute top-0 left-0 h-[450px] w-[450px] rounded-full bg-cyan-500/20 blur-[120px]"
       />
       <motion.div
         style={{ x: x2, y: y2 }}
@@ -48,18 +39,7 @@ function Background() {
       <motion.div
         animate={{ x: [0, 60, 0], y: [0, -40, 0] }}
         transition={{ duration: 18, repeat: Infinity, repeatType: "easeInOut" }}
-        className="
-          absolute
-          top-1/2
-          left-1/2
-          h-[300px]
-          w-[300px]
-          -translate-x-1/2
-          -translate-y-1/2
-          rounded-full
-          bg-purple-600/10
-          blur-[100px]
-        "
+        className="absolute top-1/2 left-1/2 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-purple-600/10 blur-[100px]"
       />
 
       <div
@@ -67,8 +47,7 @@ function Background() {
           [background-size:80px_80px]"
       />
 
-      <div
-        className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#020617_80%)]"/>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#020617_80%)]" />
     </div>
   );
 }

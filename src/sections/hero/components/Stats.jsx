@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { getGithubStats } from "@/services/github_service";
 import { useEffect, useState } from "react";
-import StatsSkeleton from "../stats_skeleton/StatsSkeleton";
+import StatsSkeleton from "./StatsSkeleton";
 import Counter from "@/components/counter/Counter";
 
 function Stats() {
@@ -34,23 +34,11 @@ function Stats() {
           initial={{ opacity: 0, y: 25 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: index * 0.15 }}
-          className="
-            rounded-2xl
-            border
-            border-white/10
-            bg-white/5
-            p-5
-            text-center
-            backdrop-blur-x
-            transition
-            hover:-translate-y-1
-            hover:border-cyan-500/50
-          "
+          className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdrop-blur-x transition hover:-translate-y-1 hover:border-cyan-500/50"
         >
           <h3 className="text-3xl font-bold text-cyan-400">
             <Counter end={card.value} suffix={card.suffix} />
           </h3>
-
           <p className="mt-2 text-slate-400">{card.label}</p>
         </motion.div>
       ))}

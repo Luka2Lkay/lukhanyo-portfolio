@@ -39,23 +39,10 @@ function FloatingIcons() {
               x,
               y,
             }}
-            className="
-              absolute
-              flex
-              h-16
-              w-16
-              items-center
-              justify-center
-              rounded-2xl
-              border
-              border-white/10
-              bg-white/5
-              backdrop-blur-xl
-              shadow-lg
-            "
             whileHover={{
               scale: 1.2,
             }}
+            className="absolute flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-lg"
           >
             <Icon size={30} className="text-cyan-400" />
           </motion.div>
@@ -65,33 +52,14 @@ function FloatingIcons() {
       <motion.div
         animate={{ y: [0, -12, 0] }}
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        className="
-          relative
-          flex
-          h-64
-          w-64
-          items-center
-          justify-center
-          overflow-hidden
-          rounded-full
-          border
-          border-cyan-500/40
-          bg-white/5
-          backdrop-blur-xl
-        "
+        className="relative flex h-64 w-64 items-center justify-center overflow-hidden rounded-full border border-cyan-500/40 bg-white/5 backdrop-blur-xl"
       >
         <div className="absolute inset-0 bg-cyan-500/10 blur-3xl" />
 
         <img
           src="../../../src/assets/Luka.jpg"
           alt="Lukhanyo"
-          className="
-            relative
-            h-56
-            w-56
-            rounded-full
-            object-cover
-          "
+          className="relative h-56 w-56 rounded-full object-cover"
         />
       </motion.div>
     </div>

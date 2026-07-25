@@ -1,6 +1,6 @@
-import MyStory from "@/components/about_section/my_story/MyStory";
-import JourneyTimeline from "@/components/about_section/journey_timeline/JourneyTimeline";
-import FocusArears from "@/components/about_section/focus_areas/FocusArears";
+import MyStory from "@/sections/about/components/MyStory";
+import JourneyTimeline from "@/sections/about/components/JourneyTimeline";
+import FocusArears from "@/sections/about/components/FocusArears";
 
 function About() {
   return (

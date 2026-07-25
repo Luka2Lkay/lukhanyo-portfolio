@@ -1,6 +1,5 @@
-import { motion } from "framer-motion";
-import { focusAreas } from "@/components/about_section/data/focus_areas";
-import FocusAreasCard from "../focus_areas_card/FocusAreasCard";
+import { focusAreas } from "@/sections/about/data/focus_areas";
+import FocusAreasCard from "./FocusAreasCard";
 
 function FocusArears() {
   return (
