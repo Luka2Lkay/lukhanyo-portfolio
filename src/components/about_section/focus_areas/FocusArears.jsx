@@ -18,7 +18,7 @@ const focusAreas = [
     icon: <Database size={28} />,
     title: "Backend & Databases",
     description:
-      "Deepening my knowledge of PostgreSQL, API design, and application architecture.",
+      "Deepening my knowledge of SQL, API design, and application architecture.",
   },
   {
     icon: <BookOpen size={28} />,
@@ -30,7 +30,7 @@ const focusAreas = [
 
 function FocusArears() {
   return (
-    <div className="mt-24">
+    <div className="rmt-24">
       <div className="mb-12 text-center">
         <p className="text-sm uppercase tracking-widest text-cyan-400">
           What I'm Doing

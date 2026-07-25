@@ -11,6 +11,7 @@ import ScrollIndicator from "@/components/hero_section/scroll_indicator/ScrollIn
 const skills = [
   "React",
   "Next.js",
+  "JavaScript",
   "TypeScript",
   "Node.js",
   "Express.js",
@@ -49,9 +50,9 @@ function Hero() {
             </p>
 
             <div className="mt-5 flex flex-wrap gap-3">
-              {skills.map((skill, index) => (
+              {skills.map((skill) => (
                 <span
-                  key={index}
+                  key={skill}
                   className="rounded-full bg-cyan-500/20 px-4 py-2"
                 >
                   {skill}

@@ -1,16 +1,10 @@
-import { useInView } from "react-intersection-observer";
-import CountUp from "react-countup";
 import { motion } from "framer-motion";
 import { getGithubStats } from "@/services/github_service";
 import { useEffect, useState } from "react";
 import StatsSkeleton from "../stats_skeleton/StatsSkeleton";
+import Counter from "@/components/counter/Counter";
 
 function Stats() {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.5,
-  });
-
   const [githubStats, setGithubStats] = useState(null);
 
   useEffect(() => {
@@ -54,13 +48,7 @@ function Stats() {
           "
         >
           <h3 className="text-3xl font-bold text-cyan-400">
-            {inView && (
-              <CountUp.default
-                end={card.value}
-                duration={2}
-                suffix={card.suffix}
-              />
-            )}
+            <Counter end={card.value} suffix={card.suffix} />
           </h3>
 
           <p className="mt-2 text-slate-400">{card.label}</p>

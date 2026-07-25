@@ -15,7 +15,7 @@ function TypingText() {
             words={[
               "Full Stack Developer",
               "React Developer",
-              "Frontend Engineer",
+              "Frontend Developer",
               "Backend Developer",
               "Problem Solver",
             ]}
