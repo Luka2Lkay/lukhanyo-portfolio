@@ -21,33 +21,6 @@ function FocusArears() {
       <div className="grid gap-6 md:grid-cols-2">
         {focusAreas.map((area, index) => (
           <FocusAreasCard area={area} index={index} key={area.title} />
-          // <motion.div
-          //   key={area.title}
-          //   initial={{ opacity: 0, y: 40 }}
-          //   whileInView={{ opacity: 1, y: 0 }}
-          //   transition={{ duration: 0.5, delay: index * 0.15 }}
-          //   viewport={{ once: true }}
-          //   whileHover={{
-          //     scale: 1.02,
-          //     y: -8,
-          //   }}
-          //   className="
-          //     rounded-3xl
-          //     border border-white/10
-          //     bg-white/5
-          //     p-8
-          //     backdrop-blur-xl
-          //     transition
-          //   "
-          // >
-          //   <div className="mb-5 inline-flex rounded-2xl bg-cyan-500/10 p-4 text-cyan-400">
-          //     {area.icon}
-          //   </div>
-
-          //   <h3 className="text-xl font-semibold text-white">{area.title}</h3>
-
-          //   <p className="mt-4 leading-7 text-slate-400">{area.description}</p>
-          // </motion.div>
         ))}
       </div>
     </div>
