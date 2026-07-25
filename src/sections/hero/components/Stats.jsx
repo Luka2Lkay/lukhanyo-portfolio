@@ -27,12 +27,13 @@ function Stats() {
   ];
 
   return (
-    <div ref={ref} className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4">
+    <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4">
       {cards.map((card, index) => (
         <motion.div
           key={card.label}
           initial={{ opacity: 0, y: 25 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.5, delay: index * 0.15 }}
           className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdrop-blur-x transition hover:-translate-y-1 hover:border-cyan-500/50"
         >

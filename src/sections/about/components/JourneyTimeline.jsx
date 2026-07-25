@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { timeline } from "@/sections/about/data/timeline";
 import TimelineCard from "./TimelineCard";
 
