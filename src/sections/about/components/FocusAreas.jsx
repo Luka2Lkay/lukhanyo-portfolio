@@ -3,7 +3,7 @@ import FocusAreasCard from "./FocusAreasCard";
 
 function FocusArears() {
   return (
-    <div className="rmt-24">
+    <div className="mt-24">
       <div className="mb-12 text-center">
         <p className="text-sm uppercase tracking-widest text-cyan-400">
           What I'm Doing
