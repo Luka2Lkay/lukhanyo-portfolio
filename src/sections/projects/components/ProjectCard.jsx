@@ -7,7 +7,7 @@ function ProjectCard({ project }) {
     <motion.article
       whileHover={{ y: -10 }}
       transition={{ duration: 0.3 }}
-      className="group overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl"
+      className="group overflow-hidden rounded-3xl bg-white/5 backdrop-blur-xl border border-cyan-500/20 hover:border-cyan-500 hover:shadow-[0_0_40px_rgba(6,182,212,0.3)]"
     >
       <div className="overflow-hidden">
         <img

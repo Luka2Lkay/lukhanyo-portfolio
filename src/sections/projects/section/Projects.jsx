@@ -44,9 +44,15 @@ function Projects() {
             layout
             className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3"
           >
-            {filteredProjects.map((project) => (
-              <ProjectCard key={project.id} project={project} />
-            ))}
+            {filteredProjects.length > 0 ? (
+              filteredProjects.map((project) => (
+                <ProjectCard key={project.id} project={project} />
+              ))
+            ) : (
+              <h2 className="text-3xl font-semibold text-cyan-400 text-center ">
+                Comming Soon!
+              </h2>
+            )}
           </motion.div>
         </AnimatePresence>
       </div>
