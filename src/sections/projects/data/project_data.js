@@ -1,33 +1,228 @@
 import workflowGenerator from "@/assets/projects/workflow_generator.png";
+import workflowGenerator1 from "@/assets/projects/workflow_generator_1.png";
+import workflowGenerator2 from "@/assets/projects/workflow_generator_2.png";
+import workflowGenerator3 from "@/assets/projects/workflow_generator_3.png";
+
 import courseManagement from "@/assets/projects/course_management.png";
+import courseManagement1 from "@/assets/projects/course_management_1.png";
+import courseManagement2 from "@/assets/projects/course_management_2.png";
+import courseManagement3 from "@/assets/projects/course_management_3.png";
+
+import homeOfCommerce from "@/assets/projects/hoc.png";
+import homeOfCommerce1 from "@/assets/projects/hoc_1.png";
+import homeOfCommerce2 from "@/assets/projects/hoc_2.png";
+import homeOfCommerce3 from "@/assets/projects/hoc_3.png";
 
 export const projects = [
   {
     id: 1,
     title: "Workflow Generator",
+    subtitle: "AI-powered Business Process Optimization",
     category: "fullstack",
-    description: "An online system that analyzes work processes.",
+
     image: workflowGenerator,
+    images: [
+      workflowGenerator,
+      workflowGenerator1,
+      workflowGenerator2,
+      workflowGenerator3,
+    ],
+
+    overview:
+      "An AI-powered web application that analyzes business workflows and generates optimized process recommendations using Large Language Models.",
+
+    description:
+      "AI Workflow Generator helps businesses identify inefficiencies in their operational processes by analyzing workflow descriptions and generating optimized process diagrams and recommendations.",
+
+    problem:
+      "Many businesses struggle to identify bottlenecks and inefficiencies in their workflows. Traditional process analysis is often time-consuming and requires consultants.",
+
+    solution:
+      "Built an AI-powered platform that accepts workflow descriptions, analyzes them using the DeepSeek model via OpenRouter API, and generates optimized workflows with actionable recommendations.",
+
+    features: [
+      "AI workflow analysis",
+      "Process optimization suggestions",
+      "Workflow visualization",
+      "Responsive dashboard",
+      "Modern UI with Tailwind CSS",
+      "RESTful API integration",
+    ],
+
+    challenges: [
+      "Designing effective AI prompts",
+      "Handling inconsistent AI responses",
+      "Optimizing API request performance",
+      "Creating a responsive user experience",
+    ],
+
+    lessons: [
+      "Prompt engineering techniques",
+      "Working with LLM APIs",
+      "Managing asynchronous API requests",
+      "Building scalable React architecture",
+    ],
+
     technologies: [
       "React",
-      "Node",
+      "Node.js",
       "Express",
       "OpenRouter API",
-      "DeepSeek Model",
+      "DeepSeek",
       "Tailwind CSS",
+      "Vite",
     ],
-    github: "https://github.com/Luka2Lkay/Workflow",
-    live: "https://ubuntublog.com",
+
+    architecture: ["React", "Express API", "OpenRouter", "DeepSeek AI"],
+
+    github: "https://github.com/Luka2Lkay/workflow-generator",
+
+    live: "https://workflow-generator-iz7g.onrender.com/",
+
+    featured: true,
   },
+
   {
     id: 2,
+
     title: "Course Management System",
-    category: "Fullstack",
-    description:
-      "A platform for learners to discover and book driving schools.",
+
+    subtitle: "Full Stack Learning Platform",
+
+    category: "fullstack",
+
     image: courseManagement,
-    technologies: ["Angular", "MongoDB", "Node", "Express", "Material UI"],
-    github: "",
-    live: "",
+
+    images: [
+      courseManagement,
+      courseManagement1,
+      courseManagement2,
+      courseManagement3,
+    ],
+
+    overview:
+      "A complete course management platform where administrators can create, update, and manage courses with image uploads.",
+
+    description:
+      "A full-stack application that allows users to manage course information with secure image uploads, cloud storage, and CRUD functionality.",
+
+    problem:
+      "Managing educational content manually becomes inefficient as the number of courses grows.",
+
+    solution:
+      "Developed a centralized management system with image uploads, cloud storage, and a responsive administrative interface.",
+
+    features: [
+      "Course CRUD",
+      "Cloudinary image uploads",
+      "REST API",
+      "Responsive UI",
+      "MongoDB database",
+      "Material Design interface",
+    ],
+
+    challenges: [
+      "Image upload pipeline",
+      "Cloudinary integration",
+      "MongoDB schema design",
+      "Error handling",
+    ],
+
+    lessons: [
+      "Building scalable REST APIs",
+      "Managing file uploads",
+      "Working with Angular services",
+      "Database modeling",
+    ],
+
+    technologies: [
+      "Angular",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Cloudinary",
+      "Multer",
+      "Angular Material",
+    ],
+
+    architecture: ["Angular", "Express API", "MongoDB", "Cloudinary"],
+
+    github:
+      "https://github.com/Luka2Lkay/Course-Management-System-With-Backend",
+
+    live: "https://course-management-system-with-backe-beta.vercel.app/available-courses",
+
+    featured: true,
+  },
+
+  {
+    id: 3,
+
+    title: "Home of Commerce",
+
+    subtitle: "Educational Tutoring Platform",
+
+    category: "fullstack",
+
+    image: homeOfCommerce,
+
+    images: [homeOfCommerce, homeOfCommerce1, homeOfCommerce2, homeOfCommerce3],
+
+    overview:
+      "A modern tutoring platform that enables students to discover tutoring services, submit enquiries, and book lessons online.",
+
+    description:
+      "Home of Commerce is a responsive educational platform designed to improve the student booking experience while giving administrators an easy way to manage enquiries.",
+
+    problem:
+      "The business had no modern online presence and relied on manual communication for student enquiries and bookings.",
+
+    solution:
+      "Designed and developed a modern full-stack website with an online booking system, contact forms, responsive UI, and backend email integration.",
+
+    features: [
+      "Online booking",
+      "Contact forms",
+      "Email notifications",
+      "Responsive design",
+      "Animated user interface",
+      "Educational resources",
+      "FAQ section",
+    ],
+
+    challenges: [
+      "Form validation",
+      "Email delivery",
+      "Responsive layouts",
+      "User experience improvements",
+    ],
+
+    lessons: [
+      "Improving conversion-focused UI",
+      "Using Framer Motion effectively",
+      "Building reusable React components",
+      "Integrating Brevo email services",
+    ],
+
+    technologies: [
+      "React",
+      "Express",
+      "Supabase",
+      "Tailwind CSS",
+      "React Router",
+      "React Hook Form",
+      "Zod",
+      "Framer Motion",
+      "Brevo",
+      "Vite",
+    ],
+
+    architecture: ["React", "Express API", "Supabase", "Brevo"],
+
+    github: "https://github.com/Luka2Lkay/home-of-commerce",
+
+    live: "https://www.homeofcommerce.co.za/",
+
+    featured: true,
   },
 ];

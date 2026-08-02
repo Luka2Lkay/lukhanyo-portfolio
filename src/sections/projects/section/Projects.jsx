@@ -2,11 +2,14 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { projects } from "@/sections/projects/data/project_data";
 import ProjectCard from "../components/ProjectCard";
+import ProjectModal from "../components/ProjectModal";
 
 const filters = ["all", "fullstack", "frontend", "backend", "mobile"];
 
 function Projects() {
   const [activeFilter, setActiveFilter] = useState("all");
+const [selectedProject, setSelectedProject] = useState(null);
+
   const filteredProjects =
     activeFilter === "all"
       ? projects
@@ -46,7 +49,11 @@ function Projects() {
           >
             {filteredProjects.length > 0 ? (
               filteredProjects.map((project) => (
-                <ProjectCard key={project.id} project={project} />
+                <ProjectCard
+                  key={project.id}
+                  project={project}
+                  onOpen={() => setSelectedProject(project)}
+                />
               ))
             ) : (
               <h2 className="text-3xl font-semibold text-cyan-400 text-center ">
@@ -56,6 +63,13 @@ function Projects() {
           </motion.div>
         </AnimatePresence>
       </div>
+      {selectedProject && (
+        <ProjectModal
+          project={selectedProject}
+          open={!!selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+      )}
     </section>
   );
 }

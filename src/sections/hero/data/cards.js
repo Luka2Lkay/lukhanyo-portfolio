@@ -1,5 +1,5 @@
 export const cards = (githubStats) => {
-  [
+  return [
     { value: githubStats.repositories, suffix: "+", label: "Repositories" },
     { value: githubStats.stars, suffix: "+", label: "Stars" },
     { value: githubStats.contributions, suffix: "+", label: "Contributions" },

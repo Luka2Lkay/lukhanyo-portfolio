@@ -13,47 +13,61 @@ function MyStory() {
       </span>
 
       <h3 className="mt-3 text-3xl font-bold text-white">
-        Building technology solutions that solve real-world problems.
+        From saving code on OneDrive to building full-stack applications
       </h3>
 
       <div className="mt-6 space-y-5 text-slate-400 leading-8">
         <p>
-          I didn't get into software development because I wanted to write code
-          all day—I got into it because I enjoy solving problems and building
-          things that people can actually use.
+          I didn't get into software development because I dreamed of writing
+          code all day. I got into it because I enjoy solving problems, building
+          things, and constantly asking, <em>"How does this actually work?"</em>
         </p>
         <br />
         <p>
-          What started as curiosity about how websites work quickly turned into
-          a passion for creating applications and learning how everything fits
-          together, from the frontend to the backend. The more I built, the more
-          I realized that I enjoy turning ideas into real products and finding
-          better ways to work.
+          {" "}
+          Like many self-taught developers, my journey started with curiosity.
+          Every small project taught me something new, and every bug somehow
+          became an opportunity to learn (even if it didn't feel like it at the
+          time).{" "}
         </p>
         <br />
         <p>
-          Over the years, I've worked with technologies like React, TypeScript,
-          C#, Node.js, Express, SQL Server, and MongoDB, building projects that
-          challenged me to think beyond just writing features. I enjoy creating
-          modern, interactive experiences and developing solutions that help
-          businesses and communities.
+          {" "}
+          In the beginning, I had no idea what Git or GitHub were. Whenever I
+          made changes to a project, I'd simply save another copy to OneDrive
+          and hope for the best. If you've ever had files named{" "}
+          <strong>"Project Final"</strong>, <strong>"Project Final 2"</strong>,
+          or <strong>"Project Final Really Final"</strong>, you'll understand
+          exactly how that went.{" "}
         </p>
         <br />
         <p>
-          Lately, I've been exploring workflow automation, AI integrations, and
-          AI-assisted development workflows. I'm fascinated by how AI can help
-          developers move faster, automate repetitive tasks, and build smarter
-          applications. Whether it's integrating AI features into products or
-          using AI to improve my own development process, I'm always looking for
-          ways to work more efficiently and create better software.
+          {" "}
+          Everything changed when I discovered <strong>The Odin Project</strong>
+          . That's where I learned about Git and GitHub, and suddenly version
+          control made so much sense. No more duplicate folders, no more
+          wondering which file was the latest, and no more accidental
+          overwrites. Looking back, I honestly don't know how I survived without
+          it.{" "}
         </p>
         <br />
         <p>
-          Right now, I'm focused on building full-stack applications,
-          experimenting with new technologies, and creating solutions that make
-          a real impact—especially for local businesses and organizations that
-          can benefit from modern digital tools.
+          {" "}
+          Since then, I've continued expanding my skills across both frontend
+          and backend development. I enjoy building applications with React,
+          TypeScript, Node.js, Express, PostgreSQL, MongoDB, and other modern
+          technologies, always focusing on creating software that's practical,
+          maintainable, and enjoyable to use.{" "}
         </p>
+        <br />
+        <p>
+          {" "}
+          More recently, I've been exploring workflow automation and AI-powered
+          applications. I'm fascinated by how AI can help developers work
+          smarter, automate repetitive tasks, and build products that genuinely
+          solve real-world problems instead of just adding flashy features.{" "}
+        </p>
+        <br />
       </div>
     </motion.div>
   );
