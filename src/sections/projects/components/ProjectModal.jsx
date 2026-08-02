@@ -8,6 +8,7 @@ import {
   CheckCircle2,
   Lightbulb,
   TriangleAlert,
+  Bug,
 } from "lucide-react";
 
 function ProjectModal({ project, open, onClose }) {
@@ -199,6 +200,19 @@ function ProjectModal({ project, open, onClose }) {
                       ))}
                     </div>
                   </section>
+                )}
+
+                {project.funFact && (
+                  <div className="rounded-2xl border border-amber-400/20 bg-amber-400/5 p-6">
+                    <h3 className=" flex gap-2 mb-3 text-lg font-semibold text-amber-300">
+                      <Bug className="mt-1 text-amber-400" />
+                      Bug Hunt Challenge
+                    </h3>
+
+                    <p className="leading-7 text-amber-100/90">
+                      {project.funFact}
+                    </p>
+                  </div>
                 )}
               </div>
             </div>

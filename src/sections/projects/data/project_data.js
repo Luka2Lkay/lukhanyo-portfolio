@@ -13,6 +13,11 @@ import homeOfCommerce1 from "@/assets/projects/hoc_1.png";
 import homeOfCommerce2 from "@/assets/projects/hoc_2.png";
 import homeOfCommerce3 from "@/assets/projects/hoc_3.png";
 
+import recipeSearch from "@/assets/projects/recipe_search.png";
+import recipeSearch1 from "@/assets/projects/recipe_search_1.png";
+import recipeSearch2 from "@/assets/projects/recipe_search_2.png";
+import recipeSearch3 from "@/assets/projects/recipe_search_3.png";
+
 export const projects = [
   {
     id: 1,
@@ -224,5 +229,64 @@ export const projects = [
     live: "https://www.homeofcommerce.co.za/",
 
     featured: true,
+  },
+  {
+    id: 4,
+
+    title: "Recipe Search App",
+
+    subtitle: "Discover recipes from around the world",
+
+    category: "frontend",
+
+    image: recipeSearch, // import your image
+
+    images: [recipeSearch, recipeSearch1, recipeSearch2, recipeSearch3],
+
+    overview:
+      "A modern recipe discovery application that lets users search for meals, explore ingredients, and find cooking inspiration through an intuitive interface.",
+
+    description:
+      "A responsive React application that integrates with a recipe API, allowing users to search for meals, browse recipes, and view detailed cooking instructions.",
+
+    problem:
+      "Finding recipes online often means navigating cluttered websites and endless ads. I wanted a clean, fast, and enjoyable browsing experience.",
+
+    solution:
+      "Built a lightweight recipe search application with a responsive interface, fast search functionality, and detailed recipe pages powered by a public recipe API.",
+
+    features: [
+      "Recipe search",
+      "Detailed recipe pages",
+      "Ingredient lists",
+      "Cooking instructions",
+      "Responsive design",
+      "Fast API integration",
+    ],
+
+    challenges: [
+      "Handling API responses",
+      "Managing loading and error states",
+      "Designing a responsive UI",
+    ],
+
+    lessons: [
+      "Working with external APIs",
+      "Improving state management",
+      "Building reusable React components",
+    ],
+
+    technologies: ["React", "JavaScript", "CSS", "REST API", "Vite"],
+
+    architecture: ["React", "Recipe API"],
+
+    github: "https://github.com/Luka2Lkay/recipe-search-app",
+
+    live: "http://localhost:5174/dashboard",
+
+    featured: false,
+
+    funFact:
+      "I may have accidentally left one tiny bug hiding somewhere in this project. Think you've found it? Let me know—I promise I won't pretend it was a feature.",
   },
 ];

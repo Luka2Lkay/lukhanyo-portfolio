@@ -1,0 +1,1 @@
+export {default as Certifications} from '@/sections/certifications/section/Certification';
