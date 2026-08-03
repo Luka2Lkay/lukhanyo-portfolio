@@ -1,25 +1,7 @@
 import { motion } from "framer-motion";
 import CertificationCard from "@/sections/certifications/components/CertificationCard";
 import { certifications } from "@/sections/certifications/data/certifications_data";
-
-const stats = [
-  {
-    label: "Certifications",
-    value: "3+",
-  },
-  {
-    label: "Degree",
-    value: "1",
-  },
-  {
-    label: "Expected Graduation",
-    value: "2028",
-  },
-  {
-    label: "Always",
-    value: "Learning",
-  },
-];
+import { stats } from "@/sections/certifications/data/stats";
 
 function Certification() {
   return (

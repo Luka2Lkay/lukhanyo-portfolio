@@ -1,11 +1,15 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { contactSchema } from "@/sections/contact/schema/contact_schemas";
 import { Send, Loader2 } from "lucide-react";
 import SuccessfullFormSubmission from "@/sections/contact/components/SuccessfullFormSubmission";
+import axios from "axios";
 
 function ContactForm() {
+  const [error, setError] = useState(null);
+
   const {
     register,
     handleSubmit,
@@ -15,12 +19,21 @@ function ContactForm() {
     resolver: zodResolver(contactSchema),
     mode: "onBlur",
   });
- 
+
   const onSubmit = async (data) => {
-    console.log(data);
+    const baseUrl = "https://my-portfolio-express-ysd1.onrender.com/";
+
+    await axios.post(`${baseUrl}api/send-email`, data);
+
     reset();
-  }
-  
+
+    try {
+    } catch (error) {
+      console.error("Error sending email:", error);
+      setError("Failed to send message. Please try again.");
+    }
+  };
+
   if (isSubmitSuccessful) {
     return (
       <SuccessfullFormSubmission
@@ -41,6 +54,14 @@ function ContactForm() {
       onSubmit={handleSubmit(onSubmit)}
       className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl"
     >
+      {error && (
+        <div
+          role="alert"
+          className="rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-700"
+        >
+          {error}
+        </div>
+      )}
       <h3 className="text-2xl font-bold text-white">Send Me a Message</h3>
       <p className="text-slate-400">
         I'd love to hear about your project or opportunity.
