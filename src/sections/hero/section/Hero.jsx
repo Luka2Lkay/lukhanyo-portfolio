@@ -3,7 +3,7 @@ import TypingText from "@/sections/hero/components/TypingText";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import { ArrowRight } from "lucide-react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-Icons/fa";
 import Stats from "@/sections/hero/components/Stats";
 import FloatingIcons from "@/sections/hero/components/FloatingIcons";
 import ScrollIndicator from "@/sections/hero/components/ScrollIndicator";

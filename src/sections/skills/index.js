@@ -1,1 +1,1 @@
-export { default as Skills } from "@/sections/skills/pages/Skills";
+export { default as Skills } from "@/sections/skills/section/Skills";

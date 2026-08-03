@@ -8,7 +8,6 @@ function Skills() {
   const categories = Object.keys(skillCategories);
   const activeskills = skillCategories[activeCategory].skills;
 
-  console.log("activeSkills", activeskills);
   return (
     <section
       id="skills"

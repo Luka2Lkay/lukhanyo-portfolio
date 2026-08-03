@@ -1,23 +1,36 @@
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { contactSchema } from "../schema/contact_schemas";
+import { contactSchema } from "@/sections/contact/schema/contact_schemas";
 import { Send, Loader2 } from "lucide-react";
+import SuccessfullFormSubmission from "@/sections/contact/components/SuccessfullFormSubmission";
 
 function ContactForm() {
   const {
     register,
     handleSubmit,
     reset,
-    formState: { errors, isSubmitting },
+    formState: { errors, isSubmitting, isSubmitSuccessful },
   } = useForm({
     resolver: zodResolver(contactSchema),
+    mode: "onBlur",
   });
-
+ 
   const onSubmit = async (data) => {
     console.log(data);
-    // Handle form submission
-  };
+    reset();
+  }
+  
+  if (isSubmitSuccessful) {
+    return (
+      <SuccessfullFormSubmission
+        title="Message sent!"
+        paragraph="Thank you for contacting me. I'll get back to you as soon as possible."
+        buttonText="Send Another Message"
+        onReset={reset}
+      />
+    );
+  }
 
   return (
     <motion.form
@@ -98,9 +111,7 @@ function ContactForm() {
           placeholder="Tell me about your project..."
         />
         {errors.message && (
-          <p className="mt-1 text-sm text-red-4<PASSWORD>">
-            {errors.message.message}
-          </p>
+          <p className="mt-1 text-sm text-red-400">{errors.message.message}</p>
         )}
       </div>
 
@@ -111,13 +122,13 @@ function ContactForm() {
       >
         {isSubmitting ? (
           <>
-            <Loader2 className="animate-spin" size={18} />
             Sending...
+            <Loader2 className="animate-spin" size={18} />
           </>
         ) : (
           <>
-            <Send />
             Send Message
+            <Send />
           </>
         )}
       </button>
