@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
 
 function SuccessfullFormSubmission({ title, paragraph, buttonText, onReset }) {
-  console.log("success component!");
   return (
     <motion.article
       initial={{ opacity: 0, scale: 0.95 }}

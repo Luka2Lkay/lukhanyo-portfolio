@@ -21,16 +21,19 @@ function ContactForm() {
   });
 
   const onSubmit = async (data) => {
-    const baseUrl = "https://my-portfolio-express-ysd1.onrender.com/";
-
-    await axios.post(`${baseUrl}api/send-email`, data);
-
-    reset();
+    setError(null);
+    const baseUrl = import.meta.env.VITE_API_BASE_URL;
 
     try {
+      await axios.post(`${baseUrl.replace(/\/$/, "")}/api/send-email`, data);
+      reset();
     } catch (error) {
       console.error("Error sending email:", error);
       setError("Failed to send message. Please try again.");
+      throw new Error(
+        error.response?.data?.message ??
+          "Failed to send message. Please try again.",
+      );
     }
   };
 
