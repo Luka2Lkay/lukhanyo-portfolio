@@ -18,6 +18,11 @@ import recipeSearch1 from "@/assets/projects/recipe_search_1.png";
 import recipeSearch2 from "@/assets/projects/recipe_search_2.png";
 import recipeSearch3 from "@/assets/projects/recipe_search_3.png";
 
+import memoryGame from "@/assets/projects/memory_game.png";
+import memoryGame1 from "@/assets/projects/memory_game_1.png";
+import memoryGame2 from "@/assets/projects/memory_game_2.png";
+import memoryGame3 from "@/assets/projects/memory_game_3.png";
+
 export const projects = [
   {
     id: 1,
@@ -288,5 +293,63 @@ export const projects = [
 
     funFact:
       "I may have accidentally left one tiny bug hiding somewhere in this project. Think you've found it? Let me know—I promise I won't pretend it was a feature.",
+  },
+  {
+    id: 5,
+    title: "Memory Game",
+    subtitle: "Interactive Card Matching Game",
+    category: "frontend",
+
+    image: memoryGame,
+    images: [memoryGame, memoryGame1, memoryGame2, memoryGame3],
+
+    overview:
+      "A responsive memory matching game built with React and Tailwind CSS that challenges players to find matching card pairs while tracking their performance.",
+
+    description:
+      "Memory Game is an interactive web application that tests players' memory through randomized card matching. The game supports multiple grid sizes, tracks elapsed time and flips, and provides a smooth, responsive experience across devices.",
+
+    problem:
+      "Create an engaging browser-based game that delivers an enjoyable user experience while demonstrating React state management, game logic, and responsive UI design.",
+
+    solution:
+      "Developed a dynamic memory matching game with randomized card shuffling, configurable board sizes, real-time timer and move tracking, and a victory modal to celebrate successful completion.",
+
+    features: [
+      "Multiple grid sizes (2×2, 3×2, 4×3, 5×2)",
+      "Randomized card shuffle",
+      "Real-time timer",
+      "Flip counter",
+      "Win modal",
+      "Responsive design",
+    ],
+
+    challenges: [
+      "Managing complex game state",
+      "Implementing reliable card matching logic",
+      "Preventing multiple rapid card selections",
+      "Creating a responsive grid for different board sizes",
+    ],
+
+    lessons: [
+      "Advanced React state management",
+      "Building interactive game logic",
+      "Working with timers and side effects",
+      "Creating reusable React components",
+    ],
+
+    technologies: ["React", "Vite", "Tailwind CSS", "JavaScript", "CSS"],
+
+    architecture: [
+      "React",
+      "Component-Based Architecture",
+      "Game State Management",
+    ],
+
+    github: "https://github.com/Luka2Lkay/memory-game",
+
+    live: "https://memory-game-smoky-iota.vercel.app/",
+
+    featured: false,
   },
 ];
