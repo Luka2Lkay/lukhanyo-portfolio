@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { icons } from "@/sections/hero/data/icons";
 import FloatingIconsCard from "@/sections/hero/components/FloatingIconsCard";
+import profilePhoto from "@/assets/Luka.jpg";
 
 function FloatingIcons() {
   return (
@@ -23,7 +24,7 @@ function FloatingIcons() {
         <div className="absolute inset-0 bg-cyan-500/10 blur-3xl" />
 
         <img
-          src="../../../src/assets/Luka.jpg"
+          src={profilePhoto}
           alt="Lukhanyo"
           className="relative h-56 w-56 rounded-full object-cover"
         />
