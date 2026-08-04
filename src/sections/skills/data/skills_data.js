@@ -11,7 +11,7 @@ import {
   SiGithub,
   SiDocker,
   SiFigma,
-} from "react-Icons/si";
+} from "react-icons/si";
 
 export const skillCategories = {
   frontend: {

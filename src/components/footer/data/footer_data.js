@@ -4,7 +4,7 @@ import {
   Heart,
 } from "lucide-react";
 
-import { FaGithub, FaLinkedin } from "react-Icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export const links = [
   { name: "Home", href: "#home" },

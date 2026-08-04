@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import ContactForm from "@/sections/contact/components/ContactForm";
-import ContactInfoLink from "../components/ContactInfoLink";
+import ContactInfoLink from "@/sections/contact/components/ContactInfoLink";
 import SocialLink from "@/sections/contact/components/SocialLink";
 import { contactInfo } from "@/sections/contact/data/contact_info";
 import { socialLinks } from "@/sections/contact/data/social_links";

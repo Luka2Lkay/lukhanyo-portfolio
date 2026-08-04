@@ -1,11 +1,11 @@
-import { FaReact, FaNodeJs, FaGitAlt } from "react-Icons/fa";
+import { FaReact, FaNodeJs, FaGitAlt } from "react-icons/fa";
 import {
   SiTypescript,
   SiNextdotjs,
   SiMongodb,
   SiPostgresql,
   SiExpress,
-} from "react-Icons/si";
+} from "react-icons/si";
 
 export const icons = [
   { Icon: FaReact, x: 0, y: -170 },
