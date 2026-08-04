@@ -244,7 +244,7 @@ export const projects = [
 
     category: "frontend",
 
-    image: recipeSearch, // import your image
+    image: recipeSearch
 
     images: [recipeSearch, recipeSearch1, recipeSearch2, recipeSearch3],
 
