@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Menu, X, Moon, Sun } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 
 const navItems = [
@@ -17,7 +17,6 @@ function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
   const [activeSection, setActiveSection] = useState("home");
-  const [isDark, setIsDark] = useState(true);
 
   const { scrollY } = useScroll();
 
@@ -38,7 +37,6 @@ function Navbar() {
     setShowNavbar(currentScrollY < prevScrollY);
   });
 
-  // Lock body scroll and listen for Escape key when mobile menu is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -55,7 +53,6 @@ function Navbar() {
     }
   }, [isOpen]);
 
-  // Track active section via IntersectionObserver
   useEffect(() => {
     const handleIntersection = (entries) => {
       entries.forEach((entry) => {
@@ -81,11 +78,10 @@ function Navbar() {
     <motion.header
       animate={{ y: showNavbar || isOpen ? 0 : "-100%" }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
-      className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${
-        scrolled || isOpen
-          ? "bg-slate-900/90 backdrop-blur-md shadow-lg border-b border-slate-800/60"
-          : "bg-slate-900/40 backdrop-blur-sm"
-      }`}
+      className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${scrolled || isOpen
+        ? "bg-slate-900/90 backdrop-blur-md shadow-lg border-b border-slate-800/60"
+        : "bg-slate-900/40 backdrop-blur-sm"
+        }`}
     >
       <nav className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <a
@@ -95,7 +91,6 @@ function Navbar() {
           Lukhanyo<span className="text-cyan-400">.</span>
         </a>
 
-        {/* Desktop Navigation Links */}
         <ul className="hidden md:flex items-center gap-7">
           {navItems.map((item) => {
             const isActive = activeSection === item.href.slice(1);
@@ -103,42 +98,21 @@ function Navbar() {
               <li key={item.href}>
                 <a
                   href={item.href}
-                  className={`relative text-sm font-medium transition-colors duration-200 group ${
-                    isActive ? "text-cyan-400" : "text-gray-300 hover:text-cyan-400"
-                  }`}
+                  className={`relative text-sm font-medium transition-colors duration-200 group ${isActive ? "text-cyan-400" : "text-gray-300 hover:text-cyan-400"
+                    }`}
                 >
                   {item.name}
                   <span
-                    className={`absolute left-0 -bottom-1 h-[2px] bg-cyan-400 transition-all duration-300 ${
-                      isActive ? "w-full" : "w-0 group-hover:w-full"
-                    }`}
+                    className={`absolute left-0 -bottom-1 h-[2px] bg-cyan-400 transition-all duration-300 ${isActive ? "w-full" : "w-0 group-hover:w-full"
+                      }`}
                   />
                 </a>
               </li>
             );
           })}
-
-          <button
-            type="button"
-            onClick={() => setIsDark(!isDark)}
-            aria-label="Toggle theme"
-            className="p-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-800/60 rounded-full transition"
-          >
-            {isDark ? <Sun size={18} /> : <Moon size={18} />}
-          </button>
         </ul>
 
-        {/* Mobile Action Buttons */}
         <div className="flex items-center gap-3 md:hidden">
-          <button
-            type="button"
-            onClick={() => setIsDark(!isDark)}
-            aria-label="Toggle theme"
-            className="p-2 text-gray-300 hover:text-cyan-400 rounded-full transition"
-          >
-            {isDark ? <Sun size={20} /> : <Moon size={20} />}
-          </button>
-
           <button
             type="button"
             className="p-2 text-white hover:text-cyan-400 transition"
@@ -152,7 +126,6 @@ function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile Menu Drawer */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -171,9 +144,8 @@ function Navbar() {
                     <a
                       href={item.href}
                       onClick={() => setIsOpen(false)}
-                      className={`font-medium transition-colors duration-200 ${
-                        isActive ? "text-cyan-400 font-semibold" : "text-gray-200 hover:text-cyan-400"
-                      }`}
+                      className={`font-medium transition-colors duration-200 ${isActive ? "text-cyan-400 font-semibold" : "text-gray-200 hover:text-cyan-400"
+                        }`}
                     >
                       {item.name}
                     </a>
