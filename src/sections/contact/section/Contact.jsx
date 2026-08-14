@@ -57,7 +57,7 @@ function Contact() {
               </h3>
             </div>
             <p className="mt-4 leading-7 text-slate-300">
-              I'm currently open to junior software developer roles, freelance
+              I'm currently open to junior-mid software developer roles, freelance
               projects, and collaborations.
             </p>
           </div>
